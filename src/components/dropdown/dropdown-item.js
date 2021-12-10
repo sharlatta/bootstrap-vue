@@ -17,7 +17,8 @@ export const props = makePropsConfigurable(
   sortKeys({
     ...linkProps,
     linkClass: makeProp(PROP_TYPE_ARRAY_OBJECT_STRING),
-    variant: makeProp(PROP_TYPE_STRING)
+    role: makeProp(PROP_TYPE_STRING),
+    listItemRole: makeProp(PROP_TYPE_STRING)
   }),
   NAME_DROPDOWN_ITEM
 )
@@ -37,7 +38,7 @@ export const BDropdownItem = /*#__PURE__*/ Vue.extend({
     computedAttrs() {
       return {
         ...this.bvAttrs,
-        role: 'menuitem'
+        role: this.role
       }
     }
   },
@@ -56,14 +57,14 @@ export const BDropdownItem = /*#__PURE__*/ Vue.extend({
     }
   },
   render(h) {
-    const { linkClass, variant, active, disabled, onClick, bvAttrs } = this
+    const { linkClass, variant, active, disabled, onClick, bvAttrs, listItemRole } = this
 
     return h(
       'li',
       {
         class: bvAttrs.class,
         style: bvAttrs.style,
-        attrs: { role: 'presentation' }
+        attrs: { role: listItemRole }
       },
       [
         h(

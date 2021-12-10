@@ -18,7 +18,9 @@ export const props = makePropsConfigurable(
     activeClass: makeProp(PROP_TYPE_STRING, 'active'),
     buttonClass: makeProp(PROP_TYPE_ARRAY_OBJECT_STRING),
     disabled: makeProp(PROP_TYPE_BOOLEAN, false),
-    variant: makeProp(PROP_TYPE_STRING)
+    variant: makeProp(PROP_TYPE_STRING),
+    role: makeProp(PROP_TYPE_STRING),
+    listItemRole: makeProp(PROP_TYPE_STRING)
   },
   NAME_DROPDOWN_ITEM_BUTTON
 )
@@ -38,7 +40,7 @@ export const BDropdownItemButton = /*#__PURE__*/ Vue.extend({
     computedAttrs() {
       return {
         ...this.bvAttrs,
-        role: 'menuitem',
+        role: this.role,
         type: 'button',
         disabled: this.disabled
       }
@@ -56,14 +58,14 @@ export const BDropdownItemButton = /*#__PURE__*/ Vue.extend({
     }
   },
   render(h) {
-    const { active, variant, bvAttrs } = this
+    const { active, variant, bvAttrs, listItemRole } = this
 
     return h(
       'li',
       {
         class: bvAttrs.class,
         style: bvAttrs.style,
-        attrs: { role: 'presentation' }
+        attrs: { role: listItemRole }
       },
       [
         h(
