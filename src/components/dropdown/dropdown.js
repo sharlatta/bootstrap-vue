@@ -178,7 +178,6 @@ export const BDropdown = /*#__PURE__*/ Vue.extend({
         class: this.menuClasses,
         attrs: {
           role,
-          tabindex: '-1',
           'aria-labelledby': this.safeId(split ? '_BV_button_' : '_BV_toggle_')
         },
         on: {
