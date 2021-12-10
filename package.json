@@ -1,5 +1,5 @@
 {
-  "name": "bootstrap-vue",
+  "name": "@sharlatta/bootstrap-vue",
   "version": "2.21.2",
   "description": "With more than 85 components, over 45 available plugins, several directives, and 1000+ icons, BootstrapVue provides one of the most comprehensive implementations of the Bootstrap v4 component and grid system available for Vue.js v2.6, complete with extensive and automated WAI-ARIA accessibility markup.",
   "main": "dist/bootstrap-vue.common.js",
@@ -10,7 +10,10 @@
   "sass": "src/index.scss",
   "style": "dist/bootstrap-vue.css",
   "license": "MIT",
-  "repository": "bootstrap-vue/bootstrap-vue",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bootstrap-vue/bootstrap-vue.git"
+  },
   "homepage": "https://bootstrap-vue.org",
   "types": "src/index.d.ts",
   "web-types": "dist/web-types.json",
@@ -19,30 +22,12 @@
     "attributes": "dist/vetur-attributes.json"
   },
   "contributors": [
-    {
-      "name": "Pooya Parsa",
-      "url": "https://github.com/pi0"
-    },
-    {
-      "name": "Troy Morehouse",
-      "url": "https://github.com/tmorehouse"
-    },
-    {
-      "name": "Jacob Müller",
-      "url": "https://github.com/jackmu95"
-    },
-    {
-      "name": "Hiws",
-      "url": "https://github.com/Hiws"
-    },
-    {
-      "name": "Vitaly Mosin",
-      "url": "https://github.com/mosinve"
-    },
-    {
-      "name": "Alex Regan",
-      "url": "https://github.com/alexsasharegan"
-    }
+    "Pooya Parsa (https://github.com/pi0)",
+    "Troy Morehouse (https://github.com/tmorehouse)",
+    "Jacob Müller (https://github.com/jackmu95)",
+    "Hiws (https://github.com/Hiws)",
+    "Vitaly Mosin (https://github.com/mosinve)",
+    "Alex Regan (https://github.com/alexsasharegan)"
   ],
   "files": [
     "dist",
@@ -218,5 +203,12 @@
     "type": "opencollective",
     "url": "https://opencollective.com/bootstrap-vue",
     "logo": "https://opencollective.com/bootstrap-vue/logo.txt"
+  },
+  "bugs": {
+    "url": "https://github.com/bootstrap-vue/bootstrap-vue/issues"
+  },
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
   }
 }
